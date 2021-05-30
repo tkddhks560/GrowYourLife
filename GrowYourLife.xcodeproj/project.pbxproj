@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11778BE52658C01400D05FB9 /* GrowYourLifeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11778BE42658C01400D05FB9 /* GrowYourLifeApp.swift */; };
+		11778BE72658C01400D05FB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11778BE62658C01400D05FB9 /* ContentView.swift */; };
+		11778BE92658C01700D05FB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11778BE82658C01700D05FB9 /* Assets.xcassets */; };
+		11778BEC2658C01700D05FB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11778BEB2658C01700D05FB9 /* Preview Assets.xcassets */; };
+		11778BF52658C06700D05FB9 /* DoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11778BF42658C06700D05FB9 /* DoView.swift */; };
+		11778BF82658C4AC00D05FB9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11778BF72658C4AC00D05FB9 /* HomeView.swift */; };
+		11A50BCF2658CB69000B2D2F /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A50BCE2658CB69000B2D2F /* TabBar.swift */; };
+		11A50BD22658CDE3000B2D2F /* DoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A50BD12658CDE3000B2D2F /* DoDetail.swift */; };
+		11A50BD52658D650000B2D2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11A50BD42658D650000B2D2F /* GoogleService-Info.plist */; };
+		11A50C0326590A14000B2D2F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A50C0226590A14000B2D2F /* LoginView.swift */; };
+		11A50C1C2659101F000B2D2F /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A50C1B2659101F000B2D2F /* AuthenticationViewModel.swift */; };
+		11E790B62659C27100E1C843 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E790B52659C27100E1C843 /* BlurView.swift */; };
+		11E790B92659EFFD00E1C843 /* MakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E790B82659EFFD00E1C843 /* MakeView.swift */; };
+		11E790BC265A1F9600E1C843 /* DayPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E790BB265A1F9600E1C843 /* DayPickerView.swift */; };
+		11E790D6265C8D3C00E1C843 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 11E790D5265C8D3C00E1C843 /* Lottie */; };
+		11E790D9265C8D7400E1C843 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E790D8265C8D7400E1C843 /* LoadingView.swift */; };
+		11E790DC265C8D9F00E1C843 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E790DB265C8D9F00E1C843 /* LottieView.swift */; };
+		11E790E2265C970C00E1C843 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 11E790DF265C970C00E1C843 /* loading.json */; };
+		11E790E3265C970C00E1C843 /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 11E790E0265C970C00E1C843 /* success.json */; };
+		7B9978077B9E19125FE73E4E /* Pods_GrowYourLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA165CF41B33FE43440CD5D /* Pods_GrowYourLife.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		110EBA6ADC15D96CAC75372A /* Pods-GrowYourLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrowYourLife.release.xcconfig"; path = "Target Support Files/Pods-GrowYourLife/Pods-GrowYourLife.release.xcconfig"; sourceTree = "<group>"; };
+		11778BE12658C01400D05FB9 /* GrowYourLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrowYourLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11778BE42658C01400D05FB9 /* GrowYourLifeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowYourLifeApp.swift; sourceTree = "<group>"; };
+		11778BE62658C01400D05FB9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		11778BE82658C01700D05FB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		11778BEB2658C01700D05FB9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		11778BED2658C01700D05FB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11778BF42658C06700D05FB9 /* DoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoView.swift; sourceTree = "<group>"; };
+		11778BF72658C4AC00D05FB9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		11A50BCE2658CB69000B2D2F /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		11A50BD12658CDE3000B2D2F /* DoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoDetail.swift; sourceTree = "<group>"; };
+		11A50BD42658D650000B2D2F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		11A50C0226590A14000B2D2F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		11A50C1B2659101F000B2D2F /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		11E790B52659C27100E1C843 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		11E790B82659EFFD00E1C843 /* MakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeView.swift; sourceTree = "<group>"; };
+		11E790BB265A1F9600E1C843 /* DayPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPickerView.swift; sourceTree = "<group>"; };
+		11E790D8265C8D7400E1C843 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		11E790DB265C8D9F00E1C843 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		11E790DF265C970C00E1C843 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		11E790E0265C970C00E1C843 /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
+		5AA165CF41B33FE43440CD5D /* Pods_GrowYourLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrowYourLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F014CD3BFD861A19C6FF55BE /* Pods-GrowYourLife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrowYourLife.debug.xcconfig"; path = "Target Support Files/Pods-GrowYourLife/Pods-GrowYourLife.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11778BDE2658C01400D05FB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B9978077B9E19125FE73E4E /* Pods_GrowYourLife.framework in Frameworks */,
+				11E790D6265C8D3C00E1C843 /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11778BD82658C01400D05FB9 = {
+			isa = PBXGroup;
+			children = (
+				11778BE32658C01400D05FB9 /* GrowYourLife */,
+				11778BE22658C01400D05FB9 /* Products */,
+				26F9E68DDFF30EBAA03D8A35 /* Pods */,
+				D1FC0BB699DC46EBCB95AEA1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		11778BE22658C01400D05FB9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11778BE12658C01400D05FB9 /* GrowYourLife.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11778BE32658C01400D05FB9 /* GrowYourLife */ = {
+			isa = PBXGroup;
+			children = (
+				11778BE42658C01400D05FB9 /* GrowYourLifeApp.swift */,
+				11778BE62658C01400D05FB9 /* ContentView.swift */,
+				11A50C1B2659101F000B2D2F /* AuthenticationViewModel.swift */,
+				11A50C0226590A14000B2D2F /* LoginView.swift */,
+				11E790D8265C8D7400E1C843 /* LoadingView.swift */,
+				11E790DB265C8D9F00E1C843 /* LottieView.swift */,
+				11A50BCE2658CB69000B2D2F /* TabBar.swift */,
+				11778BF72658C4AC00D05FB9 /* HomeView.swift */,
+				11E790B82659EFFD00E1C843 /* MakeView.swift */,
+				11E790BB265A1F9600E1C843 /* DayPickerView.swift */,
+				11A50BD12658CDE3000B2D2F /* DoDetail.swift */,
+				11778BF42658C06700D05FB9 /* DoView.swift */,
+				11E790B52659C27100E1C843 /* BlurView.swift */,
+				11778BE82658C01700D05FB9 /* Assets.xcassets */,
+				11E790DE265C970C00E1C843 /* Lottie */,
+				11A50BD42658D650000B2D2F /* GoogleService-Info.plist */,
+				11778BED2658C01700D05FB9 /* Info.plist */,
+				11778BEA2658C01700D05FB9 /* Preview Content */,
+			);
+			path = GrowYourLife;
+			sourceTree = "<group>";
+		};
+		11778BEA2658C01700D05FB9 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				11778BEB2658C01700D05FB9 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		11E790DE265C970C00E1C843 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				11E790DF265C970C00E1C843 /* loading.json */,
+				11E790E0265C970C00E1C843 /* success.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		26F9E68DDFF30EBAA03D8A35 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F014CD3BFD861A19C6FF55BE /* Pods-GrowYourLife.debug.xcconfig */,
+				110EBA6ADC15D96CAC75372A /* Pods-GrowYourLife.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D1FC0BB699DC46EBCB95AEA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AA165CF41B33FE43440CD5D /* Pods_GrowYourLife.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11778BE02658C01400D05FB9 /* GrowYourLife */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11778BF02658C01700D05FB9 /* Build configuration list for PBXNativeTarget "GrowYourLife" */;
+			buildPhases = (
+				CB54472F8EF2F995B4648BCE /* [CP] Check Pods Manifest.lock */,
+				11778BDD2658C01400D05FB9 /* Sources */,
+				11778BDE2658C01400D05FB9 /* Frameworks */,
+				11778BDF2658C01400D05FB9 /* Resources */,
+				0A1DE1F10F27E978632FE5DA /* [CP] Embed Pods Frameworks */,
+				B9126BC94F5C2482BBF19A73 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GrowYourLife;
+			packageProductDependencies = (
+				11E790D5265C8D3C00E1C843 /* Lottie */,
+			);
+			productName = GrowYourLife;
+			productReference = 11778BE12658C01400D05FB9 /* GrowYourLife.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		11778BD92658C01400D05FB9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					11778BE02658C01400D05FB9 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 11778BDC2658C01400D05FB9 /* Build configuration list for PBXProject "GrowYourLife" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 11778BD82658C01400D05FB9;
+			packageReferences = (
+				11E790D4265C8D3B00E1C843 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
+			productRefGroup = 11778BE22658C01400D05FB9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				11778BE02658C01400D05FB9 /* GrowYourLife */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11778BDF2658C01400D05FB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11E790E3265C970C00E1C843 /* success.json in Resources */,
+				11778BEC2658C01700D05FB9 /* Preview Assets.xcassets in Resources */,
+				11A50BD52658D650000B2D2F /* GoogleService-Info.plist in Resources */,
+				11E790E2265C970C00E1C843 /* loading.json in Resources */,
+				11778BE92658C01700D05FB9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A1DE1F10F27E978632FE5DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GrowYourLife/Pods-GrowYourLife-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GrowYourLife/Pods-GrowYourLife-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GrowYourLife/Pods-GrowYourLife-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9126BC94F5C2482BBF19A73 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GrowYourLife/Pods-GrowYourLife-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GrowYourLife/Pods-GrowYourLife-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GrowYourLife/Pods-GrowYourLife-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB54472F8EF2F995B4648BCE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GrowYourLife-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11778BDD2658C01400D05FB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11E790B92659EFFD00E1C843 /* MakeView.swift in Sources */,
+				11778BE72658C01400D05FB9 /* ContentView.swift in Sources */,
+				11E790BC265A1F9600E1C843 /* DayPickerView.swift in Sources */,
+				11A50C0326590A14000B2D2F /* LoginView.swift in Sources */,
+				11778BF82658C4AC00D05FB9 /* HomeView.swift in Sources */,
+				11E790D9265C8D7400E1C843 /* LoadingView.swift in Sources */,
+				11778BF52658C06700D05FB9 /* DoView.swift in Sources */,
+				11A50C1C2659101F000B2D2F /* AuthenticationViewModel.swift in Sources */,
+				11E790DC265C8D9F00E1C843 /* LottieView.swift in Sources */,
+				11E790B62659C27100E1C843 /* BlurView.swift in Sources */,
+				11A50BD22658CDE3000B2D2F /* DoDetail.swift in Sources */,
+				11778BE52658C01400D05FB9 /* GrowYourLifeApp.swift in Sources */,
+				11A50BCF2658CB69000B2D2F /* TabBar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		11778BEE2658C01700D05FB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(OHTER_LDFALGS)",
+					"-ObjC",
+				);
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		11778BEF2658C01700D05FB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = (
+					"$(OHTER_LDFALGS)",
+					"-ObjC",
+				);
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		11778BF12658C01700D05FB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F014CD3BFD861A19C6FF55BE /* Pods-GrowYourLife.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"GrowYourLife/Preview Content\"";
+				DEVELOPMENT_TEAM = HJT4JQ548K;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = GrowYourLife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.knu.comp420.moaap10.GrowYourLife;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		11778BF22658C01700D05FB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 110EBA6ADC15D96CAC75372A /* Pods-GrowYourLife.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"GrowYourLife/Preview Content\"";
+				DEVELOPMENT_TEAM = HJT4JQ548K;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = GrowYourLife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.knu.comp420.moaap10.GrowYourLife;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11778BDC2658C01400D05FB9 /* Build configuration list for PBXProject "GrowYourLife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11778BEE2658C01700D05FB9 /* Debug */,
+				11778BEF2658C01700D05FB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11778BF02658C01700D05FB9 /* Build configuration list for PBXNativeTarget "GrowYourLife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11778BF12658C01700D05FB9 /* Debug */,
+				11778BF22658C01700D05FB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		11E790D4265C8D3B00E1C843 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		11E790D5265C8D3C00E1C843 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11E790D4265C8D3B00E1C843 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 11778BD92658C01400D05FB9 /* Project object */;
+}
