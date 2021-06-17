@@ -51,11 +51,22 @@ struct MakeView: View {
                     "points" : 0,
                     "image" : "tree_0_0",
                     "date": Date(),
-                    "checkday": "",
+                    "checkday": checkday,
                     "continueday" : 0,
                     "firstday" : "",
                     "done" : false
                 ])
+            }
+        }
+    }
+    
+    func deleteData() {
+        db.collection("user").document(viewModel.userid).delete() { error in
+            if let error = error {
+                print("Error   \(viewModel.userid) \(error.localizedDescription)")
+            }
+            else {
+                print("deleted \(viewModel.userid).")
             }
         }
     }
@@ -66,6 +77,13 @@ struct MakeView: View {
             VStack {
                 HStack{
                     Spacer()
+                    Image(systemName: "trash")
+                        .font(.system(size: 20))
+                        .padding(.top, 10)
+                        .onTapGesture {
+                            deleteData()
+                            showMake = false
+                        }
                     Image(systemName: "square.and.arrow.up")
                         .font(.system(size: 20))
                         .padding(.top, 10)
@@ -88,11 +106,11 @@ struct MakeView: View {
                             }
                         }
                     }
-                    .padding(.top, isTapped1 ? 15 : 0)
+                    .padding(.top, isTapped1||title != "" ? CGFloat(15) : 0)
                     .background(
                         Text("할 것")
-                            .scaleEffect(isTapped1 ? 0.8 : 1)
-                            .offset(x:isTapped1 ? -7 : 0, y:isTapped1 ? -15 : 0)
+                            .scaleEffect(isTapped1||title != "" ? 0.8 : 1)
+                            .offset(x:isTapped1||title != "" ? -7 : 0, y:isTapped1||title != "" ? -15 : 0)
                             .foregroundColor(.gray)
                         , alignment: .leading
                     )
@@ -112,11 +130,11 @@ struct MakeView: View {
                         }
                     }
                     
-                    .padding(.top, isTapped2 ? 15 : 0)
+                    .padding(.top, isTapped2||subtitle != "" ? CGFloat(15) : 0)
                     .background(
                         Text("세부 내용")
-                            .scaleEffect(isTapped2 ? 0.8 : 1)
-                            .offset(x:isTapped2 ? -7 : 0, y:isTapped2 ? -15 : 0)
+                            .scaleEffect(isTapped2||subtitle != "" ? 0.8 : 1)
+                            .offset(x:isTapped2||subtitle != "" ? -7 : 0, y:isTapped2||subtitle != "" ? -15 : 0)
                             .foregroundColor(.gray)
                         , alignment: .leading
                     )
@@ -137,9 +155,9 @@ struct MakeView: View {
                         ForEach(items.indices) { index in
                             Text(days[index])
                                 .font(.system(size: 25))
-                                .fontWeight(selections.contains(items[index]) ? .bold : .thin)
-                                .foregroundColor(selections.contains(items[index]) ? .blue : .gray)
-                                .scaleEffect(selections.contains(items[index]) ? 1.2 : 0.8)
+                                .fontWeight(selections.contains(items[index])||checkday.contains("\(index)") ? .bold : .thin)
+                                .foregroundColor(selections.contains(items[index])||checkday.contains("\(index)") ? .blue : .gray)
+                                .scaleEffect(selections.contains(items[index])||checkday.contains("\(index)") ? 1.2 : 0.8)
                         }
                     }
                 }

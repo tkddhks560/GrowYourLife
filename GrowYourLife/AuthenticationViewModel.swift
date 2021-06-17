@@ -16,8 +16,13 @@ class AuthenticationViewModel: NSObject, ObservableObject{
     }
     
     @Published var state: SignInState = .signedOut
-    @Published var isLogIn = false
+    @Published var isLogIn: Bool = UserDefaults.standard.bool(forKey: "isLogIn"){
+        didSet{
+            UserDefaults.standard.set(isLogIn, forKey: "isLogIn")
+        }
+    }
     @Published var userid = ""
+    @Published var useremail = ""
     @Published var isLoading = false
     override init() {
         super.init()
@@ -74,6 +79,7 @@ extension AuthenticationViewModel: GIDSignInDelegate {
                 if let error = error {
                     print(error.localizedDescription)
                 } else {
+                    self.useremail = user.profile.email
                     self.isLoading = false
                     self.isLogIn = true
                     self.state = .signedIn

@@ -11,6 +11,7 @@ struct DoView: View {
     @EnvironmentObject var viewModel: AuthenticationViewModel
     @State var isClick = false
     @State var data: UserData
+    let db = Firestore.firestore()
     
     func getday() -> String{
         let dateFormat = DateFormatter()
@@ -33,25 +34,31 @@ struct DoView: View {
                     .font(.title)
                 Text(data.subtitle)
                     .font(.subheadline)
-                Text(getday())
                 HStack {
                     Color.blue
                         .frame(width: CGFloat((data.points * 30)),height:10)
                         .animation(.easeIn)
                         .cornerRadius(20)
                     Spacer()
-                    Text("\(isClick ? data.points : 0)/5")
+                    Text("\(data.points)/5")
                 }
             }
             Spacer()
-            Image(systemName: isClick ? "checkmark.circle.fill" : "checkmark.circle")
+            Image(systemName: isClick||data.done  ? "checkmark.circle.fill" : "checkmark.circle")
                 .foregroundColor(.blue)
                 .font(.system(size: 30))
                 .onTapGesture {
+                    if !data.done{
                     isClick = true
                     data.points += 1
-                    let db = Firestore.firestore()
+                    if data.points == 5 {
+                        data.points = 0
+                        data.grade += 1
+                        db.collection("user").document(viewModel.userid).updateData(["grade": data.grade, "done" : true])
+                    }
+                    
                     db.collection("user").document(viewModel.userid).updateData(["points": data.points, "done" : true])
+                    }
                 }
         }
         .padding()

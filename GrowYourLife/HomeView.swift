@@ -13,32 +13,53 @@ struct HomeView: View {
     @ObservedObject var DoList = getData()
     let db = Firestore.firestore()
     @State var number = 0
-    
+    @Binding var showProfile: Bool
     
     var body: some View {
         
-        ScrollView{
-            if DoList.data.isEmpty {
-                VStack{
-                    Spacer()
-                    Text(DoList.data.isEmpty ? "No data!" : "no")
-                    Spacer()
+        VStack {
+            HStack{
+                Text("진행중인 자기계발")
+                    .font(.system(size: 28, weight: .bold))
+                Spacer()
+                Button(action: {showProfile.toggle()}) {
+                Image(systemName: "person")
+                    .foregroundColor(.primary)
+                    .font(.system(size:16, weight: .medium))
+                    .frame(width:36, height: 36)
+                    .background(Color("Background 3"))
+                    .clipShape(Circle())
+                    .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
                 }
-            } else {
-                ForEach(DoList.data) { i in
-                    DoView(data: i)
-                        .onTapGesture{
-                            showMake = true
-                        }
-                        .sheet(isPresented: $showMake) {
-                            MakeView(showMake: $showMake)
-                        }
-                }
-                .padding(0)
             }
+            .padding(.top, 20)
+            .padding(.horizontal, 25)
+            
+            
+            ScrollView{
+                if DoList.data.isEmpty {
+                    VStack{
+                        Spacer()
+                        Text(DoList.data.isEmpty ? "진행 중인 자기 계발이 없습니다! 지금 시작하세요!" : "no")
+                        Spacer()
+                    }
+                } else {
+                    ForEach(DoList.data) { i in
+                        DoView(data: i)
+                            .onTapGesture{
+                                showMake = true
+                            }
+                            .sheet(isPresented: $showMake) {
+                                MakeView(showMake: $showMake, title: i.title, subtitle: i.subtitle, checkday: i.checkday)
+                            }
+                    }
+                    .padding(0)
+                }
+            }
+            .navigationBarHidden(true)
         }
-        .navigationTitle("Do List")
-        .navigationBarHidden(true)        
+        
     }
 }
 
@@ -47,6 +68,7 @@ class getData: ObservableObject {
     
     @Published var data = [UserData]()
     @Published var noData = false
+    
     
     init() {
         
@@ -106,6 +128,6 @@ class getData: ObservableObject {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(showProfile: .constant(false))
     }
 }

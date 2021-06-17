@@ -7,6 +7,9 @@
 
 import SwiftUI
 import GoogleSignIn
+import Firebase
+
+
 
 struct LoginView: View {
     @State var email = ""
@@ -17,6 +20,26 @@ struct LoginView: View {
     @State var isLoading = false
     @State var isSuccessful = false
     @EnvironmentObject var viewModel: AuthenticationViewModel
+    
+    
+    func login() {
+        isLoading = true
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            isLoading = false            
+            viewModel.useremail = email
+            if error != nil {
+                alertMessage = "이메일이 올바르지 않거나 비밀번호가 틀립니다."
+                showAlert = true
+            } else {
+                isSuccessful = true
+                viewModel.isLogIn = true
+                UserDefaults.standard.set(true, forKey: "isLogIn")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+                    isSuccessful = false
+                }
+            }
+        }
+    }
     
     var body: some View {
         ZStack {
@@ -35,15 +58,16 @@ struct LoginView: View {
                         Image(systemName: "person.crop.circle.fill")
                             .foregroundColor(Color(#colorLiteral(red: 0.6549019608, green: 0.7137254902, blue: 0.862745098, alpha: 1)))
                             .frame(width: 44, height: 44)
-                            .background(Color("background 1"))
+                            .background(Color("Background 1"))
                             .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
                             .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 5 )
                             .padding(.leading)
                         
                         TextField("Your Email", text: $email)
+                            .autocapitalization(.none)
                             .keyboardType(.emailAddress)
                             .font(.subheadline)
-        //                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                            //                    .textFieldStyle(RoundedBorderTextFieldStyle())
                             .padding(.leading)
                             .frame(height: 44)
                             .onTapGesture {
@@ -57,7 +81,7 @@ struct LoginView: View {
                         Image(systemName: "lock.fill")
                             .foregroundColor(Color(#colorLiteral(red: 0.6549019608, green: 0.7137254902, blue: 0.862745098, alpha: 1)))
                             .frame(width: 44, height: 44)
-                            .background(Color("background 1"))
+                            .background(Color("Background 1"))
                             .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
                             .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 5 )
                             .padding(.leading)
@@ -65,7 +89,7 @@ struct LoginView: View {
                         SecureField("Password", text: $password)
                             .keyboardType(.default)
                             .font(.subheadline)
-        //                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                            //                    .textFieldStyle(RoundedBorderTextFieldStyle())
                             .padding(.leading)
                             .frame(height: 44)
                             .onTapGesture {
@@ -83,10 +107,10 @@ struct LoginView: View {
                 .shadow(color: Color.black.opacity(0.15), radius: 20, x: 0, y: 20)
                 .padding(.horizontal)
                 .offset(y: 460)
-
+                
                 VStack {
                     Spacer()
-                    Button("sign in with google") {
+                    Button("구글로 로그인 하기") {
                         viewModel.signIn()
                     }
                     .padding()
@@ -97,15 +121,15 @@ struct LoginView: View {
                 
                 VStack {
                     HStack {
-                        Text("Forgot password?")
+                        Text("비밀번호 찾기")
                             .font(.subheadline)
-                                            
+                        
                         Spacer()
                         
                         Button(action: {
-    //                        login()
+                            login()
                         }){
-                            Text("Log in").foregroundColor(.black)
+                            Text("로그인").foregroundColor(.black)
                         }
                         .padding(12)
                         .padding(.horizontal, 30)
@@ -113,7 +137,7 @@ struct LoginView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                         .shadow(color: Color(#colorLiteral(red: 0, green: 0.7529411765, blue: 1, alpha: 1)).opacity(0.3), radius: 20, x: 0, y: 20)
                         .alert(isPresented: $showAlert) {
-                            Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+                            Alert(title: Text("로그인 실패!"), message: Text(alertMessage), dismissButton: .default(Text("확인")))
                         }
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
@@ -130,7 +154,7 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView().environmentObject(AuthenticationViewModel())
     }
 }
 
@@ -169,7 +193,7 @@ struct CoverView: View {
                     .rotationEffect(Angle(degrees: show ? 360+90 : 90))
                     .blendMode(.plusDarker)
                     .animation(Animation.linear(duration: 120).repeatForever(autoreverses: false))
-//                    .animation(nil)
+                    //                    .animation(nil)
                     .onAppear{ show = true}
                 
                 Image(uiImage: #imageLiteral(resourceName: "Blob"))
@@ -177,7 +201,7 @@ struct CoverView: View {
                     .rotationEffect(Angle(degrees: show ? 360 : 0), anchor: .leading)
                     .blendMode(.overlay)
                     .animation(Animation.linear(duration: 100).repeatForever(autoreverses: false))
-//                    .animation(nil)
+                //                    .animation(nil)
             }
         )
         .background(
